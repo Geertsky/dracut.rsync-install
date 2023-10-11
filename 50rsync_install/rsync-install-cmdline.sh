@@ -1,10 +1,10 @@
 root=1
 rootok=1
-echo '[ -f /tmp/parameters.xml ]' > $hookdir/initqueue/finished/parameters.sh
-echo '[ -e /tmp/xsl ]' > $hookdir/initqueue/finished/xsl.sh
+echo '[ -f /tmp/parameters.xml ]' >$hookdir/initqueue/finished/parameters.sh
+echo '[ -e /tmp/xsl ]' >$hookdir/initqueue/finished/xsl.sh
 #remove xcat waiting for a mounted proc as it gets mounted later...
 rm /lib/dracut/hooks/initqueue/finished/xcatroot.sh
-cat<<EOT>/sbin/xcatroot
+cat <<EOT >/sbin/xcatroot
 #!/bin/sh
 
 
